@@ -20,6 +20,13 @@ module.exports = {
         sourceType: 'module',
     },
     plugins: ['vue', 'prettier', 'html'],
+    settings: {
+        'import/resolver': {
+            alias: {
+                map: [['@', './src']],
+            },
+        },
+    },
     rules: {
         'prettier/prettier': 'error',
         'import/no-extraneous-dependencies': [

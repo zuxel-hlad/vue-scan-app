@@ -5,6 +5,11 @@
 <script>
 export default {
     name: 'scan-page',
+    mounted() {
+        if (!localStorage.getItem('jwt')) {
+            this.$router.push('/login');
+        }
+    },
 };
 </script>
 <style lang="scss" scoped></style>

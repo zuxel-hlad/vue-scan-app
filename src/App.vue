@@ -1,5 +1,6 @@
 <template lang="pug">
-router-view
+main.main
+    router-view
 </template>
 <script>
 export default {
