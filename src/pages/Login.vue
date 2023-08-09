@@ -7,9 +7,11 @@ import LoginForm from '@/components/LoginForm.vue';
 
 export default {
     name: 'login-page',
+
     components: {
         LoginForm,
     },
+
     methods: {
         setAuth(info) {
             if (info) {

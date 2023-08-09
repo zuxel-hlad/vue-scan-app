@@ -23,7 +23,9 @@ form.login-form(@submit.prevent="signIn")
 <script>
 export default {
     name: 'login-form',
+
     emits: ['login'],
+
     data() {
         return {
             login: '',
