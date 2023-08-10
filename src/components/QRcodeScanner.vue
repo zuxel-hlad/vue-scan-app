@@ -51,7 +51,6 @@ export default {
         margin: 0 auto;
 
         & .qr-stream-wrapper {
-            overflow: hidden;
             border-radius: 12px;
         }
 
@@ -66,6 +65,7 @@ export default {
             background: url('../assets/svg/preloader.svg') center/contain
                 no-repeat;
             transition: opacity 0.25s;
+            border-radius: 12px;
         }
 
         &_is-loaded {
