@@ -83,7 +83,10 @@ export default {
 
         &:focus,
         &:focus-visible {
-            outline: 1px solid $gold;
+            outline: none;
+            border: none;
+            border: 1px solid $gold;
+            border-radius: 18px;
         }
         &:hover {
             border-color: $gold;
