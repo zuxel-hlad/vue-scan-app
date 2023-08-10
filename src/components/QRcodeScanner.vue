@@ -50,6 +50,10 @@ export default {
         height: 300px;
         margin: 0 auto;
 
+        & .qr-stream-wrapper {
+            overflow: hidden;
+        }
+
         &::before {
             content: '';
             position: absolute;
