@@ -52,6 +52,7 @@ export default {
 
         & .qr-stream-wrapper {
             overflow: hidden;
+            //for mobile overflow property
             transform: translateZ(0);
         }
 
