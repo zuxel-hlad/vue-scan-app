@@ -52,6 +52,7 @@ export default {
 
         & .qr-stream-wrapper {
             overflow: hidden;
+            transform: translateZ(0);
         }
 
         &::before {
