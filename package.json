@@ -25,11 +25,7 @@
         "prettier": "^3.0.1",
         "sass": "^1.64.2",
         "vite": "^4.4.6",
-        "vue-pug-plugin": "^2.0.3"
-    },
-    "vueCompilerOptions": {
-        "plugins": [
-            "vue-pug-plugin"
-        ]
+        "vue-pug-plugin": "^2.0.3",
+        "vue3-qr-reader": "^1.0.0"
     }
 }

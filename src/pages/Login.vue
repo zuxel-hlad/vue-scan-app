@@ -1,5 +1,5 @@
 <template lang="pug">
-section.section.login
+section.section
     login-form(@login="setAuth")
 </template>
 <script>
@@ -21,10 +21,4 @@ export default {
     },
 };
 </script>
-<style lang="scss" scoped>
-.login {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-</style>
+<style lang="scss" scoped></style>

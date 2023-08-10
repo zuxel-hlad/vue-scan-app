@@ -1,10 +1,12 @@
 <template lang="pug">
-section
-    h1 not found
+section.section
+    h1.title Page not found
+    router-link.link(to="/scan") Go To Scan
+
 </template>
 <script>
 export default {
     name: 'not-found',
 };
 </script>
-<style lang=""></style>
+<style lang="scss" scoped></style>

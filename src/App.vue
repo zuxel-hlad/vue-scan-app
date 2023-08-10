@@ -1,6 +1,8 @@
 <template lang="pug">
 main.main
-    router-view
+    router-view(v-slot="{Component}")
+        transition(name="page")
+            component(:is="Component")
 </template>
 <script>
 export default {

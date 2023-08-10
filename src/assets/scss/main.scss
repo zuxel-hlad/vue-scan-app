@@ -7,14 +7,22 @@ body {
     background-color: $main-bg;
     font-size: 100%;
     font-weight: 400;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .main {
+    overflow-x: hidden;
     min-height: 100vh;
 }
 
 .section {
+    padding: 100px 0;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
@@ -22,4 +30,36 @@ body {
     max-width: 1440px;
     padding: 0 12px;
     margin: 0 auto;
+}
+
+.page-enter-active,
+.page-leave-active {
+    transition: all 0.25s;
+}
+.page-enter-from,
+.page-leave-to {
+    opacity: 0;
+    transform: translateX(20px);
+    filter: blur(1rem);
+}
+
+.title {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+    color: $white;
+    margin-bottom: 50px;
+
+    @media screen and (max-width: 576px) {
+        font-size: 35px;
+    }
+}
+
+.link {
+    display: block;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: $gold;
+    text-align: center;
 }
