@@ -49,7 +49,7 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    flex: 1 1 auto;
+    width: 100%;
     max-width: 450px;
     padding: 118px 40px;
     border-radius: 6px;
