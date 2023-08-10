@@ -45,12 +45,12 @@ export default {
         position: relative;
         border: 1px solid $gold;
         border-radius: 12px;
-        overflow: hidden;
         width: 300px;
         height: 300px;
         margin: 0 auto;
 
         & .qr-stream-wrapper {
+            overflow: hidden;
             border-radius: 12px;
         }
 
