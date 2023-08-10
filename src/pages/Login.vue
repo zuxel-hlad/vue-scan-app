@@ -1,6 +1,7 @@
 <template lang="pug">
 section.section
-    login-form(@login="setAuth")
+    .container
+        login-form(@login="setAuth")
 </template>
 <script>
 import LoginForm from '@/components/LoginForm.vue';

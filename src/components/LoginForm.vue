@@ -55,6 +55,7 @@ export default {
     border-radius: 6px;
     border: 1px solid $gold;
     gap: 20px;
+    margin: 0 auto;
 
     &__label {
         display: flex;
