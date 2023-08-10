@@ -4,10 +4,9 @@
     .scanner__wrapper(
         :class="{'scanner__wrapper_is-loaded': !isLoading}"
     )
-        .scanner__wrapper-scan 
-            qr-stream(
-                @decode="onScan"
-            )
+        qr-stream(
+            @decode="onScan"
+        )
 </template>
 <script>
 import { QrStream } from 'vue3-qr-reader';
@@ -51,10 +50,9 @@ export default {
         height: 300px;
         margin: 0 auto;
 
-        &-scan {
-            width: 100%;
-            height: 100%;
+        & .qr-stream-wrapper {
             overflow: hidden;
+            border-radius: 12px;
         }
 
         &::before {
