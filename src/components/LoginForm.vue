@@ -18,6 +18,7 @@ form.login-form(@submit.prevent="signIn")
         )
     button.login-form__button(
         type="submit"
+        :disabled="!isFormValid"
         ) sign-in
 </template>
 <script>
@@ -33,9 +34,16 @@ export default {
         };
     },
 
+    computed: {
+        isFormValid() {
+            return this.login.length > 0 && this.password.length > 0;
+        },
+    },
+
     methods: {
         signIn() {
-            if (!this.login.length || !this.password.length) return;
+            if (!this.isFormValid) return;
+
             this.$emit('login', btoa(`${this.login}:${this.password}`));
             this.login = '';
             this.password = '';
@@ -55,13 +63,13 @@ export default {
     border-radius: 6px;
     border: 1px solid $gold;
     gap: 20px;
-    margin: 0 auto;
 
     &__label {
         display: flex;
         flex-direction: column;
         gap: 10px;
         font-weight: 500;
+
         &-text {
             display: block;
             color: $light-gray;
@@ -89,6 +97,7 @@ export default {
             border: 1px solid $gold;
             border-radius: 18px;
         }
+
         &:hover {
             border-color: $gold;
         }
@@ -102,7 +111,9 @@ export default {
         border: 1px solid transparent;
         font-weight: 500;
         border-radius: 15px;
-        transition: opacity 0.25s;
+        transition:
+            opacity 0.25s,
+            box-shadow 0.25s;
         background: linear-gradient(
             98deg,
             #ba8f1c 8.83%,
@@ -112,7 +123,9 @@ export default {
         color: $black;
 
         &:focus-visible {
-            outline: 1px solid $light-gray;
+            border: none;
+            outline: none;
+            border: 1px solid $gold;
         }
 
         &:hover {
@@ -120,7 +133,15 @@ export default {
         }
 
         &:active {
-            opacity: 0.8;
+            box-shadow:
+                -2px -2px 10px $gold,
+                2px 2px 10px $gold;
+            opacity: 1;
+        }
+
+        &[disabled] {
+            background: $gray;
+            pointer-events: none;
         }
     }
 }

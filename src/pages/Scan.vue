@@ -1,7 +1,6 @@
 <template lang="pug">
-section.section.scanner
-    .container
-        QRcode-Scanner(@on-scan="scanQrCode")
+section.section
+    QRcode-Scanner(@on-scan="scanQrCode")
 </template>
 <script>
 import QRcodeScanner from '@/components/QRcodeScanner.vue';
@@ -31,12 +30,4 @@ export default {
     },
 };
 </script>
-<style lang="scss" scoped>
-.scanner {
-    & .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-}
-</style>
+<style lang="scss" scoped></style>

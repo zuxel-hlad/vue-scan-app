@@ -1,11 +1,10 @@
 <template lang="pug">
-section.section.result
-    .container
-        h1.title Your result is: {{ scanResult || 'not-found' }}
-        router-link.link(
-            v-if="scanResult"
-            to="/scan"
-        ) Scan qr-code again ?
+section.section
+    h1.title Your result is: {{ scanResult || 'not-found' }}
+    router-link.link(
+        v-if="scanResult"
+        to="/scan"
+    ) Scan qr-code again ?
 </template>
 <script>
 export default {
@@ -31,4 +30,4 @@ export default {
     },
 };
 </script>
-<style lang="scss"></style>
+<style lang="scss" scoped></style>
