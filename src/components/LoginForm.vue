@@ -7,14 +7,16 @@ form.login-form(@submit.prevent="signIn")
             type="text" 
             name="login" 
             placeholder="Enter your login"
+            autocomplete="new-login"
         )
     label.login-form__label
         span.login-form__label-text Password
         input.login-form__input(
             v-model.trim="password"
             type="password" 
-            name="login" 
+            name="password" 
             placeholder="Enter your password"
+            autocomplete="new-password"
         )
     button.login-form__button(
         type="submit"
@@ -43,8 +45,7 @@ export default {
     methods: {
         signIn() {
             if (!this.isFormValid) return;
-
-            this.$emit('login', btoa(`${this.login}:${this.password}`));
+            localStorage.setItem('jwt', btoa(`${this.login}:${this.password}`));
             this.login = '';
             this.password = '';
             this.$router.push('/scan');

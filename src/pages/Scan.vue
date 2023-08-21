@@ -1,6 +1,6 @@
 <template lang="pug">
 section.section
-    QRcode-Scanner(@on-scan="scanQrCode")
+    QRcode-Scanner
 </template>
 <script>
 import QRcodeScanner from '@/components/QRcodeScanner.vue';
@@ -16,18 +16,5 @@ export default {
             this.$router.push('/login');
         }
     },
-
-    methods: {
-        scanQrCode(scanResult) {
-            if (!scanResult) return;
-            this.$router.push({
-                path: '/result',
-                query: {
-                    'scan-result': scanResult,
-                },
-            });
-        },
-    },
 };
 </script>
-<style lang="scss" scoped></style>

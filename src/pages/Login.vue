@@ -1,6 +1,6 @@
 <template lang="pug">
 section.section
-    login-form(@login="setAuth")
+    login-form
 </template>
 <script>
 import LoginForm from '@/components/LoginForm.vue';
@@ -12,13 +12,10 @@ export default {
         LoginForm,
     },
 
-    methods: {
-        setAuth(info) {
-            if (info) {
-                localStorage.setItem('jwt', info);
-            }
-        },
+    created() {
+        if (localStorage.getItem('jwt')) {
+            this.$router.push('/scan');
+        }
     },
 };
 </script>
-<style lang="scss" scoped></style>

@@ -33,7 +33,12 @@ export default {
     methods: {
         onScan(scanResult) {
             if (scanResult) {
-                this.$emit('on-scan', scanResult);
+                this.$router.push({
+                    path: '/result',
+                    query: {
+                        'scan-result': scanResult,
+                    },
+                });
             }
         },
     },
